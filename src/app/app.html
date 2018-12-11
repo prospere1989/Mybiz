@@ -1,0 +1,65 @@
+<ion-menu [content]="content">
+  <ion-header color="primary">
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list no-lines>
+      <button ion-item menuClose>
+        <ion-icon name="home" item-start>
+        </ion-icon>
+        Accueil
+      </button>
+      <button ion-item menuClose (click)="gotoPage('PublierPage')">
+        <ion-icon name="add" item-start></ion-icon>
+        Publier une annonce
+      </button>
+      <button ion-item menuClose>
+        <ion-icon name="heart" item-start>
+        </ion-icon>
+        Mes favoris
+      </button>
+      <button ion-item menuClose>
+        <ion-icon name="person" item-start>
+        </ion-icon>
+        Mon profile
+      </button>
+      <button ion-item menuClose>
+        <ion-icon name="cart" item-start>
+        </ion-icon>
+        Les categories d'annonce
+      </button>
+      <button ion-item menuClose>
+        <ion-icon name="mail" item-start>
+        </ion-icon>
+        Messagerie
+        <ion-badge color="danger" item-end>3</ion-badge>
+      </button>
+      <button ion-item>
+        <ion-icon name="notifications" item-start>
+        </ion-icon>
+        Notifications
+      </button>
+    </ion-list>
+  </ion-content>
+  <ion-footer>
+    <ion-list no-lines color="primary">
+      <button ion-item>
+        <ion-icon name="settings" item-start>
+        </ion-icon>
+        Paramètres
+      </button>
+      <button ion-item>
+        <ion-icon name="log-out" item-start>
+        </ion-icon>
+        Déconnexion
+      </button>
+    </ion-list>
+
+  </ion-footer>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

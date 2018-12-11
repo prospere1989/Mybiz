@@ -1,0 +1,23 @@
+page-login {
+    .logo{
+        h1{
+            font-size:70px;
+            color:#488aff;
+        }
+       
+    }
+    ion-content{
+        form{
+            margin-top:0px;
+        }
+    }
+    h5{
+        text-transform:uppercase;
+        color:#488aff;
+    }
+
+    .buttons-block{
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}
